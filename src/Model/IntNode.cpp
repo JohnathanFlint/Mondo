@@ -6,4 +6,5 @@
 //  Copyright © 2017 CTEC. All rights reserved.
 //
 
-#include "IntNode.hpp"
+#include "../../src/Model/IntNode.hpp"
+el/IntNode.hpp"
