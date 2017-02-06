@@ -6,6 +6,10 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		1FE597DE1E48D5F200A7D161 /* IntNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FE597DC1E48D5F200A7D161 /* IntNode.cpp */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		1FE597D01E48D40500A7D161 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -20,6 +24,8 @@
 
 /* Begin PBXFileReference section */
 		1FE597D21E48D40500A7D161 /* Mondo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Mondo; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FE597DC1E48D5F200A7D161 /* IntNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IntNode.cpp; path = Mondo/Model/IntNode.cpp; sourceTree = "<group>"; };
+		1FE597DD1E48D5F200A7D161 /* IntNode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = IntNode.hpp; path = Mondo/Model/IntNode.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +42,8 @@
 		1FE597C91E48D40500A7D161 = {
 			isa = PBXGroup;
 			children = (
+				1FE597DC1E48D5F200A7D161 /* IntNode.cpp */,
+				1FE597DD1E48D5F200A7D161 /* IntNode.hpp */,
 				1FE597D41E48D40500A7D161 /* Mondo */,
 				1FE597D31E48D40500A7D161 /* Products */,
 			);
@@ -113,6 +121,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FE597DE1E48D5F200A7D161 /* IntNode.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
