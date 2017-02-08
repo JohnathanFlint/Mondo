@@ -61,4 +61,26 @@ Constructors</panel_attributes>
 +IntNode(int, IntNode *) : constructor</panel_attributes>
     <additional_attributes/>
   </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>320</x>
+      <y>380</y>
+      <w>360</w>
+      <h>330</h>
+    </coordinates>
+    <panel_attributes>
+IntNodeArray
+--
+- head : IntNode* 
+- size : int
+--
++ IntNodeArray(int) : constructor
++ getSize() : int
++ getFromIndex(int) : int
++ setAtIndex(int index, int value) : void
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
 </diagram>
