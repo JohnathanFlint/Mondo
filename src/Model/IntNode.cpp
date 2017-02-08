@@ -7,6 +7,7 @@
 //
 
 #include "IntNode.hpp"
+#include <cstddef>
 
 IntNode :: IntNode()
 {
