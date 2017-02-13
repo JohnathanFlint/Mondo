@@ -55,5 +55,8 @@ void IntNodeArray :: setAtIndex(int index, int value)
 	current->setNodeData(value);
 }
 
-
+int IntNodeArray :: getSize()
+{
+	return size;
+}
 
