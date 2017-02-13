@@ -8,9 +8,17 @@
 #ifndef CONTROLLER_STRUCTURECONTROLLER_H_
 #define CONTROLLER_STRUCTURECONTROLLER_H_
 
+#include"../Model/Node.hpp"
+#include <string>
+
+using namespace std;
+
 class StructureController {
 private:
+	Node<int> numberNode;
+	Node<string> wordNode;
 	void testIntArray();
+	void testNodeTypes();
 
 public:
 	StructureController();
