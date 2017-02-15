@@ -4,8 +4,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>960</x>
-      <y>50</y>
+      <x>840</x>
+      <y>30</y>
       <w>160</w>
       <h>110</h>
     </coordinates>
@@ -89,18 +89,19 @@ IntNodeArray
       <x>400</x>
       <y>480</y>
       <w>160</w>
-      <h>50</h>
+      <h>60</h>
     </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m2=1..n</panel_attributes>
     <additional_attributes>10.0;10.0;140.0;30.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>980</x>
-      <y>310</y>
+      <x>990</x>
+      <y>150</y>
       <w>310</w>
-      <h>220</h>
+      <h>250</h>
     </coordinates>
     <panel_attributes>Node&lt;Type&gt;
 --
@@ -118,5 +119,35 @@ Accessors
 +setNodeData(Type value) : void
 +setNodePointer(Node&lt;Type&gt; * next) : void</panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1050</x>
+      <y>480</y>
+      <w>330</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>Array&lt;Type&gt;
+--
+- front : Node&lt;Type&gt;*
+- Size : int
+--
++ Array&lt;Type&gt;(int size) : constructor
++ getSize() : int
++ getFromIndex(int index) : Type
++ setAtIndex(int index, Type value) : void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1090</x>
+      <y>390</y>
+      <w>90</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>70.0;90.0;10.0;10.0</additional_attributes>
   </element>
 </diagram>
