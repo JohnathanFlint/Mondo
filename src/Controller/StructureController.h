@@ -17,8 +17,10 @@ class StructureController {
 private:
 	Node<int> numberNode;
 	Node<string> wordNode;
+
 	void testIntArray();
 	void testNodeTypes();
+	void testArrayTemplate();
 
 public:
 	StructureController();
