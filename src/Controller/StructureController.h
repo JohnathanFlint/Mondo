@@ -9,6 +9,7 @@
 #define CONTROLLER_STRUCTURECONTROLLER_H_
 
 #include"../Model/Node.hpp"
+#include"../Model/Array.h"
 #include <string>
 
 using namespace std;
@@ -17,6 +18,7 @@ class StructureController {
 private:
 	Node<int> numberNode;
 	Node<string> wordNode;
+	Array<int> numberArray;
 
 	void testIntArray();
 	void testNodeTypes();

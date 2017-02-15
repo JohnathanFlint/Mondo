@@ -18,6 +18,7 @@ template <class Type>
 class Array
 {
 public:
+	Array<Type>();
 	Array<Type>(int size);
 	int getSize();
 	Type getFromIndex(int index);
@@ -30,6 +31,12 @@ private:
 };
 
 //Implementation Section
+
+template <class Type>
+Array<Type> :: Array()
+{
+	//Do not use! Implemented only for compilation
+}
 
 template <class Type>
 Array<Type> :: Array(int size)

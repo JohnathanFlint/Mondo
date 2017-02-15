@@ -8,6 +8,7 @@
 #include "StructureController.h"
 #include <iostream>
 #include "../Model/IntNodeArray.h"
+#include "../Model/Timer.hpp"
 
 
 using namespace std;
@@ -16,6 +17,7 @@ StructureController::StructureController()
 {
 	wordNode = Node<string>();
 	numberNode = Node<int>();
+	numberArray = Array<int>(1);
 }
 
 void StructureController :: testNodeTypes()
@@ -24,6 +26,23 @@ void StructureController :: testNodeTypes()
 	cout << wordNode.getNodeData() << endl;
 	cout << "Here is an uninitialized int node" << endl;
 	cout << numberNode.getNodeData() << endl;
+}
+
+void StructureController :: testArrayTemplate()
+{
+	cout << "Array Template" << endl;
+	Timer arrayTimer;
+	arrayTimer.startTimer();
+	int test [9];
+	arrayTimer.stopTimer();
+	arrayTimer.displayTimerInfo();
+	arrayTimer.resetTimer();
+
+	arrayTimer.startTimer();
+	numberArray = Array<int>(9);
+	arrayTimer.stopTimer();
+	arrayTimer.displayTimerInfo();
+
 }
 
 void StructureController :: testIntArray()
@@ -52,6 +71,8 @@ void StructureController :: start()
 	cout << "Going to test the IntNodeArray" << endl;
 	testIntArray();
 	cout << "Finished IntArrayNode testing" << endl;
+
+	testArrayTemplate();
 }
 
 
