@@ -8,7 +8,7 @@
 #ifndef MODEL_NODE_HPP_
 #define MODEL_NODE_HPP_
 
-#include <cstddeflas.whitr>
+#include <cstddef>
 
 template <class Type>
 class Node
