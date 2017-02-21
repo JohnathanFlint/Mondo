@@ -14,7 +14,8 @@
 
 using namespace std;
 
-class StructureController {
+class StructureController
+{
 private:
 	Node<int> numberNode;
 	Node<string> wordNode;
@@ -23,6 +24,7 @@ private:
 	void testIntArray();
 	void testNodeTypes();
 	void testArrayTemplate();
+	void testAdvancedFeatures();
 
 public:
 	StructureController();

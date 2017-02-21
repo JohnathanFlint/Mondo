@@ -9,7 +9,7 @@
 #include <iostream>
 #include "../Model/IntNodeArray.h"
 #include "../Model/Timer.hpp"
-
+#include "../Model/Array.h"
 
 using namespace std;
 
@@ -66,6 +66,23 @@ void StructureController :: testIntArray()
 	}
 }
 
+void StructureController :: testAdvancedFeatures()
+{
+	int showDestructor = 0;
+
+	if(showDestructor < 1)
+	{
+		Array<string> words = Array<string>(4);
+		words.setAtIndex(0,"at zero");
+		words.setAtIndex(3, "in the last spot");
+		Array<string> copiedWords = Array<string>(words);
+		cout << "These should match: " << endl;
+		cout << words.getFromIndex(0) << "s should be same as " << copiedWords.getFromIndex(0) << endl;
+
+		copiedWords.setAtIndex(3, "changed the contents of the copied Array");
+	}
+}
+
 void StructureController :: start()
 {
 	cout << "Going to test the IntNodeArray" << endl;
@@ -73,6 +90,9 @@ void StructureController :: start()
 	cout << "Finished IntArrayNode testing" << endl;
 
 	testArrayTemplate();
+	testAdvancedFeatures();
 }
+
+
 
 
