@@ -1,0 +1,51 @@
+/*
+ * List
+ *
+ *  Created on: Feb 21, 2017
+ *      Author: nwhi5696
+ */
+
+#ifndef MODEL_LIST_
+#define MODEL_LIST_
+#include <assert.h>
+#include "Node.hpp"
+#include <iostream>
+
+namespace std
+
+{
+	template <class Type>
+
+	class List
+	{
+	private:
+		int size;
+		Node<Type> * front;
+
+	public:
+		//constructors
+		List<Type>();
+		List<Type>(int size);
+
+		//destructor
+		~List<Type>();
+
+		//copy constructor
+		List<Type>(const List<Type> & source);
+
+		//methods
+		void addAtIndex(int index, Type value);
+		void add(Type value);
+		Type remove(int index);
+		Type setAtIndex(int index, Type data);
+		bool contains(Type data);
+		int getSize();
+		Node<Type>* getFront();
+
+	};
+}
+
+
+
+
+#endif /* MODEL_LIST_ */
