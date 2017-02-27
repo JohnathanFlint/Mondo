@@ -29,7 +29,17 @@ public:
 	void setNextPointer(BiDirectionalNode<Type> * previous);
 };
 
+template <class Type>
+BiDirectionalNode<Type> :: BiDirectionalNode() : Node()
+{
 
+}
+
+template <class Type>
+BiDirectionalNode<Type> :: BiDirectionalNode(Type data) : Node(data)
+{
+
+}
 
 
 #endif /* MODEL_BIDIRECTIONALNODE_HPP_ */
