@@ -215,8 +215,8 @@ m2=0..n</panel_attributes>
 --
 Constructors
 + BiDirectionalNode&lt;Type&gt;() : constructor
-+ BiDirectionalNode&lt;Type&gt;(Type value) : constructor
- + BiDirectionalNode&lt;Type&gt;(Type value, BiDirectionalNode&lt;Type * next, BiDirectionalNod&lt;Type * previous) : constructor
++ BiDirectionalNode&lt;Type&gt;(Type data) : constructor
+ + BiDirectionalNode&lt;Type&gt;(Type data, BiDirectionalNode&lt;Type * next, BiDirectionalNod&lt;Type * previous) : constructor
 
 Acessors
 + getNodeData() : Type
