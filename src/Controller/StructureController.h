@@ -25,6 +25,7 @@ private:
 	void testNodeTypes();
 	void testArrayTemplate();
 	void testAdvancedFeatures();
+	void testList();
 
 public:
 	StructureController();

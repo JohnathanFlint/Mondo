@@ -42,9 +42,10 @@ namespace std
 		Type remove(int index);
 		Type setAtIndex(int index, Type data);
 		bool contains(Type data);
-		int getSize();
+		int getSize() const;
 		Node<Type>* getFront();
 		Node<Type>* getEnd();
+		Type getFromIndex(int index);
 
 	};
 
@@ -57,12 +58,30 @@ namespace std
 		this->end = nullptr;
 	}
 
+	template<class Type>
+	List<Type> :: ~List()
+	{
+		Node<Type> * destruction = front;
+		while(front != nullptr)
+		{
+			front = front->getNodePointer();
+			delete destruction;
+			destruction = front;
+		}
+	}
+
+	template<class Type>
+	int List<Type> :: getSize() const
+	{
+		return this->size;
+	}
+
 	template <class Type>
 	void List<Type> :: addFront(Type value)
 	{
 		if(size == 0)
 		{
-			Node<Type> * first = new Node(value);
+			Node<Type> * first = new Node<Type>(value);
 			this->front = first;
 			this->end = first;
 		}
@@ -72,7 +91,7 @@ namespace std
 			newFirst->setNodeData(value);
 			newFirst->setNodePointer(front);
 			//or
-			Node<Type> * newFirst = new Node<Type>(value, front);
+			//Node<Type> * newFirst = new Node<Type>(value, front);
 		}
 		size ++;
 	}
@@ -80,10 +99,10 @@ namespace std
 	template <class Type>
 	void List<Type> :: addEnd(Type data)
 	{
-		Node<Type> * added = new Node<Type>)data);
+		Node<Type> * added = new Node<Type>(data);
 		if(size == 0)
 		{
-			this-front = added;
+			this->front = added;
 			this->end = added;
 		}
 		else
@@ -176,6 +195,40 @@ namespace std
 			size--;
 			return removed;
 		}
+
+	template<class Type>
+	Type List<Type> :: getFromIndex(int index)
+	{
+		assert(index >= 0 && index < size);
+		Type information;
+
+		Node<Type> * current = front;
+		for(int position = 0; position < index; position)
+		{
+			current = current->getNodePointer();
+		}
+
+		information = current->getNodeData();
+		return information;
+	}
+
+	template<class Type>
+	bool List <Type> :: contains(Type findMe)
+	{
+		bool isInList = false;
+		Node<Type> * current = front;
+
+		for(int index = 0; index < size; index++)
+		{
+			if(current->getNodeData == findMe)
+			{
+				isInList = true;
+				return isInList;
+			}
+		}
+
+		return isInList;
+	}
 
 }
 

@@ -10,6 +10,7 @@
 #include "../Model/IntNodeArray.h"
 #include "../Model/Timer.hpp"
 #include "../Model/Array.h"
+#include "../Model/List"
 
 using namespace std;
 
@@ -80,6 +81,20 @@ void StructureController :: testAdvancedFeatures()
 		cout << words.getFromIndex(0) << "s should be same as " << copiedWords.getFromIndex(0) << endl;
 
 		copiedWords.setAtIndex(3, "changed the contents of the copied Array");
+	}
+}
+
+void StructureController :: testList()
+{
+	List<int> sample;
+	sample.addFront(2);
+	sample.addEnd(3);
+	sample.addFront(3);
+	cout << "This should be 1, 2, 3" << endl;
+
+	for(int index = 1; index < sample.getSize(); index++)
+	{
+		cout << sample.getFromIndex(index) << endl;
 	}
 }
 
