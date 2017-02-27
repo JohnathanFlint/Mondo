@@ -5,7 +5,7 @@
     <id>UMLClass</id>
     <coordinates>
       <x>590</x>
-      <y>90</y>
+      <y>370</y>
       <w>160</w>
       <h>110</h>
     </coordinates>
@@ -21,7 +21,7 @@ Constructors</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>0</x>
-      <y>140</y>
+      <y>420</y>
       <w>310</w>
       <h>190</h>
     </coordinates>
@@ -42,7 +42,7 @@ Constructors</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>290</x>
-      <y>460</y>
+      <y>740</y>
       <w>370</w>
       <h>230</h>
     </coordinates>
@@ -65,7 +65,7 @@ Constructors</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>320</x>
-      <y>770</y>
+      <y>1050</y>
       <w>340</w>
       <h>170</h>
     </coordinates>
@@ -87,20 +87,20 @@ IntNodeArray
     <id>Relation</id>
     <coordinates>
       <x>280</x>
-      <y>560</y>
+      <y>840</y>
       <w>400</w>
       <h>300</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
 m2=1..n</panel_attributes>
-    <additional_attributes>380.0;280.0;10.0;140.0;10.0;10.0</additional_attributes>
+    <additional_attributes>380.0;280.0;380.0;140.0;10.0;140.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
       <x>740</x>
-      <y>210</y>
-      <w>310</w>
+      <y>490</y>
+      <w>440</w>
       <h>250</h>
     </coordinates>
     <panel_attributes>Node&lt;Type&gt;
@@ -124,7 +124,7 @@ Accessors
     <id>UMLClass</id>
     <coordinates>
       <x>800</x>
-      <y>540</y>
+      <y>820</y>
       <w>490</w>
       <h>250</h>
     </coordinates>
@@ -151,7 +151,7 @@ Accessors
     <id>Relation</id>
     <coordinates>
       <x>840</x>
-      <y>450</y>
+      <y>730</y>
       <w>90</w>
       <h>110</h>
     </coordinates>
@@ -162,8 +162,8 @@ m2=1..n</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1200</x>
-      <y>80</y>
+      <x>1260</x>
+      <y>460</y>
       <w>390</w>
       <h>310</h>
     </coordinates>
@@ -190,13 +190,52 @@ m2=1..n</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1040</x>
-      <y>380</y>
-      <w>180</w>
-      <h>110</h>
+      <x>1170</x>
+      <y>730</y>
+      <w>110</w>
+      <h>60</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
 m2=0..n</panel_attributes>
-    <additional_attributes>160.0;10.0;160.0;80.0;10.0;80.0</additional_attributes>
+    <additional_attributes>90.0;40.0;30.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>770</x>
+      <y>160</y>
+      <w>850</w>
+      <h>280</h>
+    </coordinates>
+    <panel_attributes>Model :: BiDirectionalNode&lt;Type&gt;
+--
+- nodeData : Type
+- nextPointer : BiDirectionalNode&lt;Type&gt;*
+- previousPointer : BiDirectionalNode&lt;Type&gt;*
+--
+Constructors
++ BiDirectionalNode&lt;Type&gt;() : constructor
++ BiDirectionalNode&lt;Type&gt;(Type value) : constructor
+ + BiDirectionalNode&lt;Type&gt;(Type value, BiDirectionalNode&lt;Type * next, BiDirectionalNod&lt;Type * previous) : constructor
+
+Acessors
++ getNodeData() : Type
++ getNextPointer() : Node&lt;Type&gt;
++ getPreviousPointer() : Node&lt;Type&gt;
++ setNodeData(Type value) : void
++ setNextPointer(Node&lt;Type&gt; * next) : void 
++ setPreviousPointer(Node&lt;Type&gt; * previous) void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>760</x>
+      <y>430</y>
+      <w>310</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>290.0;60.0;70.0;60.0;10.0;10.0</additional_attributes>
   </element>
 </diagram>
