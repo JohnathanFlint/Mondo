@@ -25,8 +25,8 @@ public:
 	BiDirectionalNode<Type> * getPreviousPointer();
 
 	void setNodeData(Type data);
-	void setNexPointer(BiDirectionalnode<Type> * next);
-	void setNextPointer(BiDirectionalNode<Type> * previous);
+	void setNextPointer(BiDirectionalnode<Type> * next);
+	void setPreviousPointer(BiDirectionalNode<Type> * previous);
 };
 
 template <class Type>
