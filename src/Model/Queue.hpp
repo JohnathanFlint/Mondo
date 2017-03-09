@@ -8,7 +8,7 @@
 #ifndef MODEL_QUEUE_HPP_
 #define MODEL_QUEUE_HPP_
 
-#include "DoublyLinkedList"
+#include "DoublyLinkedList.hpp"
 
 template <class Type>
 class Queue : public DoublyLinkedList<Type>
@@ -18,7 +18,7 @@ public:
 	~Queue();
 	void add(Type data);
 	Type remove(int index);
-	void enqueue(Type Data);
+	void enqueue(Type insertedValue);
 	Type dequeue();
 	Type peek();
 
@@ -69,11 +69,11 @@ Type Queue<Type> :: remove(int index)
  5. adjust size + 1
  */
 template <class Type>
-void Queue<Type> :: enqueue(Type data)
+void Queue<Type> :: enqueue(Type insertedValue)
 {
 	BiDirectionalNode<Type> * added = new BiDirectionalNode<Type>(insertedValue);
 
-	if(this->getSize == 0 || this->getFront() == nullptr || this-getEnd() == nullptr)
+	if(this->getSize == 0 || this->getFront() == nullptr || this->getEnd() == nullptr)
 	{
 		this->setFront(added);
 	}
@@ -108,7 +108,7 @@ Type Queue<Type> :: dequeue()
 	if(this->getSize() == 1)
 	{
 		this->setEnd(nullptr);
-		tyhis->setFront(nullptr);
+		this->setFront(nullptr);
 	}
 	else
 	{
@@ -119,15 +119,15 @@ Type Queue<Type> :: dequeue()
 	delete removeMe;
 	this->setSize(this->getSize() - 1);
 
-	return removedValue
+	return removedValue;
 }
 
 template <class Type>
-Type Queue<Type> :: peak()
+Type Queue<Type> :: peek()
 {
 	assert(this->getSize() > 0);
 
-	return this-getFront()->getNodeData();
+	return this->getFront()->getNodeData();
 }
 
 

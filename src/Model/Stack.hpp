@@ -8,7 +8,7 @@
 #ifndef MODEL_STACK_HPP_
 #define MODEL_STACK_HPP_
 
-#include "DoubleLinkedList.hpp"
+#include "../Model/DoublyLinkedList.hpp"
 
 template <class Type>
 class Stack : public DoublyLinkedList<Type>
@@ -26,7 +26,7 @@ public:
 };
 
 template<class Type>
-Stack<Type> :: stack() : DoublyLinkedList<Type>()
+Stack<Type> :: Stack() : DoublyLinkedList<Type>()
 {
 
 }
@@ -59,9 +59,9 @@ Change the end pointer to show the new end of the stack
 template <class Type>
 void Stack<Type> :: push(Type addedThing)
 {
-	BiDirectionalNode<Type> * addToStack = new BiDirectionalNode(addedThing);
+	BiDirectionalNode<Type> * addToStack = new BiDirectionalNode<Type>(addedThing);
 
-	if(this->getSize() == 0 || this->getFront() == nullptr || or this->getEnd() == nullptr)
+	if(this->getSize() == 0 || this->getFront() == nullptr || this->getEnd() == nullptr)
 	{
 		this->setFront(addToStack);
 	}
@@ -111,6 +111,15 @@ Type Stack<Type> :: pop()
 
 	return removed;
 }
+
+/*
+ Adds the supplied object to the stack to the end.
+ Set new object to point to end.
+
+ Adjusts the end pointer to reflect the new end of the stack.
+ Increases the size by 1.
+*/
+
 
 
 

@@ -10,7 +10,14 @@
 
 #include"../Model/Node.hpp"
 #include"../Model/Array.h"
+#include "../Model/Timer.hpp"
+#include "../Model/IntNodeArray.h"
+#include "../Model/List"
+#include "../Model/DoubleList.hpp"
+#include "../Model/Stack.hpp"
+#include "../Model/Queue.hpp"
 #include <string>
+
 
 using namespace std;
 
@@ -26,6 +33,7 @@ private:
 	void testArrayTemplate();
 	void testAdvancedFeatures();
 	void testList();
+	void testListTiming();
 
 public:
 	StructureController();
