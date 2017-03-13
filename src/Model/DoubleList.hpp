@@ -80,6 +80,23 @@ Type DoubleList<Type> :: remove(int index)
 	this->setSize(this->getSize() - 1);
 	return derp;
 }
+
+template <class Type>
+Type DoubleList<Type> :: getFromIndex(int index)
+{
+	assert(index >= 0 && index < this->getSize());
+	Type valueAtIndex;
+
+	BiDirectionalNode<Type> * reference = this->getFront();
+	for(int position = 0; position < index; position++)
+	{
+		reference = reference->getNextPointer();
+	}
+	valueAtIndex = reference->getNodeData();
+
+	return valueAtIndex;
+}
+
 template <class Type>
 Type DoubleList<Type> :: getFromIndexFast(int index)
 {

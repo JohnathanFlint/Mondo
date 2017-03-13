@@ -73,7 +73,7 @@ void Queue<Type> :: enqueue(Type insertedValue)
 {
 	BiDirectionalNode<Type> * added = new BiDirectionalNode<Type>(insertedValue);
 
-	if(this->getSize == 0 || this->getFront() == nullptr || this->getEnd() == nullptr)
+	if(this->getSize() == 0 || this->getFront() == nullptr || this->getEnd() == nullptr)
 	{
 		this->setFront(added);
 	}
@@ -113,8 +113,9 @@ Type Queue<Type> :: dequeue()
 	else
 	{
 		this->setFront(removeMe->getNextPointer());
+		this->getFront()->setPreviousPointer(nullptr);
 	}
-	this->setFront()->setPreviousPointer(nullptr);
+
 
 	delete removeMe;
 	this->setSize(this->getSize() - 1);

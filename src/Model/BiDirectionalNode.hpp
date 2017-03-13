@@ -11,7 +11,7 @@
 #include "../Model/Node.hpp"
 
 template <class Type>
-class BiDirectionalNode : Node<Type>
+class BiDirectionalNode : public Node<Type>
 {
 	private:
 	Type Data;
@@ -22,8 +22,6 @@ public:
 	BiDirectionalNode();
 	BiDirectionalNode(Type data);
 	BiDirectionalNode(Type data, BiDirectionalNode<Type> * previous, BiDirectionalNode<Type> * next);
-
-	Type getNodeData();
 	BiDirectionalNode<Type> * getNextPointer();
 	BiDirectionalNode<Type> * getPreviousPointer();
 
@@ -55,6 +53,12 @@ this->nextPointer = next;
 }
 
 template <class Type>
+BiDirectionalNode<Type> * BiDirectionalNode<Type> :: getNextPointer()
+{
+	return this->nextPointer;
+}
+
+template <class Type>
 BiDirectionalNode<Type> * BiDirectionalNode<Type> :: getPreviousPointer()
 {
 	return this->previousPointer;
@@ -69,7 +73,7 @@ void BiDirectionalNode<Type> :: setNextPointer(BiDirectionalNode<Type> * next)
 template<class Type>
 void BiDirectionalNode<Type> :: setPreviousPointer(BiDirectionalNode<Type> * previous)
 {
-	this->previous = previous;
+	this->previousPointer = previous;
 }
 
 

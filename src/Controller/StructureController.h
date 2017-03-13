@@ -16,6 +16,7 @@
 #include "../Model/DoubleList.hpp"
 #include "../Model/Stack.hpp"
 #include "../Model/Queue.hpp"
+#include "../Model/Meme.hpp"
 #include <string>
 
 
@@ -34,6 +35,8 @@ private:
 	void testAdvancedFeatures();
 	void testList();
 	void testListTiming();
+	void testMemeQueue();
+	void testNumberStack();
 
 public:
 	StructureController();
