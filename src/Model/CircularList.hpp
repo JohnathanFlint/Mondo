@@ -81,7 +81,7 @@ Type CircularList<Type> :: remove(int index)
 	BiDirectionalNode<Type> * removed = findNode(index);
 
 
-	removedValue= removed->getNodeData();
+	removedValue = removed->getNodeData();
 
 	BiDirectionalNode<Tyoe> * oldPrevious = removd->getPreviousPointer();
 	BiDirectionalNode<Type> * oldNExt = removed->getNextPointer();
@@ -89,7 +89,16 @@ Type CircularList<Type> :: remove(int index)
 	if(this->getSize() > 1)
 	{
 		oldPrevious->seNextPointer(oldNext);
-		oldNext>setPreviousPointer(oldPRevious);
+		oldNext>setPreviousPointer(oldPrevious);
+
+		if(index == 0)
+		{
+			this->setFront(this->getFront()->getNextPointer());
+		}
+		else if(index == this->getSize() -1)
+		{
+			this->setEnd(this->getEnd()->getPReviousPointer());
+		}
 	}
 	else
 	{
@@ -130,6 +139,10 @@ Type CircularList<Type> :: setAtIndex(int index, Type data)
 	return replaced;
 }
 
+/*
+ A helper method to cut the speed needed to get to a specific node in the list.
+ Precondition: the index parameter is within the range: size < index
+ */
 template <class Type>
 BiDirectionalNode<Type> * CircularList<Type> :: findNode(int index)
 {
