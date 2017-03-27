@@ -139,6 +139,7 @@ void StructureController :: testListTiming()
 }
 
 void StructureController :: testMemeQueue()
+
 {
 	Meme firstMeme("toddler fist! with pinwheel");
 	Queue<Meme> memeQueue;
@@ -166,6 +167,29 @@ void StructureController :: testMemeQueue()
 	cout << "The number of memes is: " << memeQueue.getSize() << endl;
 }
 
+void StructureController :: testNumberStack()
+{
+	Stack<int> intStack;
+	intStack.push(3);
+	cout << "The size is: " << intStack.getSize() << endl;
+	intStack.push(9);
+	cout << "The size is: " << intStack.getSize() << endl;
+	intStack.pop();
+	cout << "The size is: " << intStack.getSize() << endl;
+	intStack.push(54);
+	cout << "The size is: " << intStack.getSize() << endl;
+	intStack.push(9001);
+	cout << "The size is: " << intStack.getSize() << endl;
+	intStack.add(33);
+	cout << "The size is: " << intStack.getSize() << endl;
+	intStack.remove(3);
+	cout << "The size is: " << intStack.getSize() << endl;
+	intStack.push(42);
+	cout << "The size is: " << intStack.getSize() << endl;
+	cout << "The top node has a value of" << intStack.peek() << endl;
+
+}
+
 void StructureController :: start()
 {
 	//cout << "Going to test the IntNodeArray" << endl;
@@ -174,7 +198,9 @@ void StructureController :: start()
 
 	//testArrayTemplate();
 	//testAdvancedFeatures();
-	testMemeQueue();
+	//testMemeQueue();
+	//testList();
+	testNumberStack();
 }
 
 

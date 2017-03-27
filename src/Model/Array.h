@@ -36,6 +36,7 @@ public:
 	Node<Type> * getFront() const;
 	Type getFromIndex(int index);
 	void setAtIndex(int index, Type value);
+	int indexOf(Type findMe);
 
 private:
 	Node<Type> * front;
@@ -154,6 +155,20 @@ Array<Type> :: Array(const Array<Type> & toBeCopied)
 		copyTemp = copyTemp->getNodePointer();
 	}
 
+}
+
+template <class Type>
+int Array<Type> :: indexOf(Type findMe)
+{
+	int index = -1;
+
+	Node<Type> * searchPointer = front;
+
+	for(int spot = 0; spot < this->getSize(); spot++)
+	{
+		return spot;
+	}
+	searchPointer = searchPointer->getNextPointer();
 }
 
 } /* namespace std */

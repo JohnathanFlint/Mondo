@@ -31,6 +31,9 @@ public:
 	void setDankness(int dank);
 	void setHipsterQuotient(double hipsterQuotient);
 	void setMainstream(bool mainstream);
+	bool operator > ( Meme & compared);
+	bool operator == ( Meme & compared);
+	bool operator < ( Meme & compared);
 };
 
 
