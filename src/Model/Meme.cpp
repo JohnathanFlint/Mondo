@@ -65,7 +65,7 @@ void Meme :: setMainstream(bool isMain)
 
 bool Meme :: operator < ( Meme & comparedMeme)
 {
-	if (this->isMainstream() && comparedMeme.isMainstream())
+	if (this->isMainstream   () && comparedMeme.isMainstream())
 		{
 			if (this->getDankness() < comparedMeme.getDankness())
 			{

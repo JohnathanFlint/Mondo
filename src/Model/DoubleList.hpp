@@ -132,11 +132,11 @@ int DoubleList<Type> :: indexOf(Type findMe)
 {
 	int index = -1;
 
-	BiDIrectionalNode<Type> * searchPointer = front;
+	BiDirectionalNode<Type> * searchPointer = this->getFront;
 
 	for(int spot = 0; spot < this->getSize(); spot++)
 		{
-			if(findME == searchPointer->getNodData())
+			if(findMe == searchPointer->getNodData())
 				{
 					return spot;
 				}
@@ -153,7 +153,7 @@ int DoubleList<Type> :: nextIndexOf(Type value, int position)
 
 	int nextIndex = -1;
 
-	BiDIrectionalNode<Type> * current = this->getFront();
+	BiDirectionalNode<Type> * current = this->getFront();
 
 	for(int index = 0; index < this->getSize(); index++)
 	{
@@ -161,7 +161,7 @@ int DoubleList<Type> :: nextIndexOf(Type value, int position)
 		{
 			if(current->getNodeData() == value)
 				{
-				return index;)
+				return index;
 				}
 		}
 		current = current->getNextPointer();
