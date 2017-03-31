@@ -25,7 +25,7 @@ public:
 
 private:
 	DoubleList<Meme> readMemeDataFromFileAsList(string filename);
-	void writeMemeDataStats(DoubleList<int> source, string filename);
+	void writeMemeDataStats(DoubleList<Meme> source, string filename);
 
 };
 

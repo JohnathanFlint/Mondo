@@ -54,7 +54,7 @@ DoubleList<Meme> FileController :: readMemeDataFromFileAsList(string filename)
 			}
 //			rowCount++;
 			//remove this line
-			cout << currentCSVLine << endl
+			cout << currentCSVLine << endl;
 		}
 		dataFile.close();
 	}
@@ -64,5 +64,24 @@ DoubleList<Meme> FileController :: readMemeDataFromFileAsList(string filename)
 	}
 
 	return dataSource;
+}
+
+void FileController :: writeMemeDataStats(DoubleList<Meme> dataSource, string filename)
+{
+	ofstream saveFile(filename);
+
+	if(saveFile.is_open())
+	{
+		saveFile << "These are the contents of the list" << endl;
+		for(int index = 0; index < dataSource.getSize(); index++)
+		{
+			saveFile << "Meme Title: " << dataSource.getFromIndex(index).getTitle() << endl;
+		}
+	}
+	else
+	{
+		cerr << "File unavailabel" << endl;
+	}
+	saveFile.close();
 }
 

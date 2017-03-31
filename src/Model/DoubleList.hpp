@@ -9,6 +9,7 @@
 #define MODEL_DOUBLELIST_HPP_
 
 #include "DoublyLinkedList.hpp"
+#include <assert.h>
 
 template <class Type>
 class DoubleList : public DoublyLinkedList<Type>
