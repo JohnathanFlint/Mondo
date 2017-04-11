@@ -442,11 +442,11 @@ m2=1..n</panel_attributes>
 + getRootPointer() : BinarySearchTreeNode&lt;Type&gt;*
 + setRootChildPointer(BinarySearchTreeNode&lt;Type&gt; * root) : void
 
-+ calculatedSize(BinarySearchTreeNode&lt;Type&gt; *) : int
+- calculatedSize(BinarySearchTreeNode&lt;Type&gt; *) : int
 
-+ inOrderTraversal(BinarySearchTreeNode&lt;Type&gt; *) : void
-+ preOrderTraversal(BinarySearchTreeNode&lt;Type&gt; *) : void
-+ postOrderTraversal(BinarySearchTreeNode&lt;Type&gt; *) : void </panel_attributes>
+- inOrderTraversal(BinarySearchTreeNode&lt;Type&gt; *) : void
+- preOrderTraversal(BinarySearchTreeNode&lt;Type&gt; *) : void
+- postOrderTraversal(BinarySearchTreeNode&lt;Type&gt; *) : void </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
