@@ -20,7 +20,7 @@ private:
 
 public:
 	BinarySearchTreeNode();
-	c d bBinarySearchTreeNode(Type data);
+	BinarySearchTreeNode(Type data);
 
 	BinarySearchTreeNode<Type> * getRootPointer();
 	BinarySearchTreeNode<Type> * getLeftChild();
@@ -32,6 +32,56 @@ public:
 
 };
 
+template <class Type>
+BinarySearchTreeNode<Type> :: BinarySearchTreeNode()
+{
+		this->root = nullptr;
+		this->leftChild = nullptr;
+		this->rightChild = nullptr;
+}
 
+template <class Type>
+BinarySearchTreeNode<Type> :: BinarySearchTreeNode(Type data) : Node<Type>(data)
+{
+	this->root = nullptr;
+	this->leftChild = nullptr;
+	this->rightChild = nullptr;
+}
+
+template <class Type>
+BinarySearchTreeNode<Type> * BinarySearchTreeNode<Type> :: getRootPointer()
+{
+	return this->root;
+}
+
+template <class Type>
+BinarySearchTreeNode<Type> * BinarySearchTreeNode<Type> :: getLeftChild()
+{
+	return this->leftChild;
+}
+
+template <class Type>
+BinarySearchTreeNode<Type> * BinarySearchTreeNode<Type> :: getRightChild()
+{
+	return this->rightChild;
+}
+
+template <class Type>
+void BinarySearchTreeNode<Type> :: setRootPointer(BinarySearchTreeNode<Type> * root)
+{
+	this->root = root;
+}
+
+template <class Type>
+void BinarySearchTreeNode<Type> :: setRootPointer(BinarySearchTreeNode<Type> * leftChild)
+{
+	this->leftChild = leftChild;
+}
+
+template <class Type>
+void BinarySearchTreeNode<Type> :: setRootPointer(BinarySearchTreeNode<Type> * rightChild)
+{
+	this->root = rightChild;
+}
 
 #endif /* MODEL_BINARYSEARCHTREENODE_H_ */
