@@ -275,7 +275,7 @@ bool CrimeData :: operator < (const CrimeData & comparedData)
 
 	double populationDifference = this->getPopulation() - comparedData.getPopulation();
 	populationDifference = abs(populationDifference);
-	double populationFactor = 1;
+	double populationFactor = 0;
 
 	if(populationDifference >= 50000 && populationDifference < 250000)
 	{
@@ -347,7 +347,7 @@ bool CrimeData :: operator > (const CrimeData & comparedData)
 
 	double populationDifference = this->getPopulation() - comparedData.getPopulation();
 	populationDifference = abs(populationDifference);
-	double populationFactor = 1;
+	double populationFactor = 0;
 
 	if(populationDifference >= 50000 && populationDifference < 250000)
 	{
@@ -374,4 +374,12 @@ bool CrimeData :: operator > (const CrimeData & comparedData)
 	}
 
 	return thisIsMoreCrime;
+}
+
+bool CrimeData :: operator == (const CrimeData & compared)
+{
+	bool isThisTheSame = !(*this <  compared) && !(*this > compared);
+
+
+	return isThisTheSame;
 }

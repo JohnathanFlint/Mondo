@@ -4,7 +4,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>730</x>
+      <x>560</x>
       <y>0</y>
       <w>160</w>
       <h>110</h>
@@ -20,7 +20,7 @@ Constructors</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1250</x>
+      <x>1080</x>
       <y>50</y>
       <w>310</w>
       <h>190</h>
@@ -41,8 +41,8 @@ Constructors</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>970</x>
-      <y>910</y>
+      <x>870</x>
+      <y>860</y>
       <w>370</w>
       <h>230</h>
     </coordinates>
@@ -64,8 +64,8 @@ Constructors</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1000</x>
-      <y>1220</y>
+      <x>530</x>
+      <y>1200</y>
       <w>340</w>
       <h>170</h>
     </coordinates>
@@ -84,21 +84,9 @@ IntNodeArray
     <additional_attributes/>
   </element>
   <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>960</x>
-      <y>1010</y>
-      <w>400</w>
-      <h>300</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
-m2=1..n</panel_attributes>
-    <additional_attributes>380.0;280.0;380.0;140.0;10.0;140.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1420</x>
+      <x>1250</x>
       <y>660</y>
       <w>440</w>
       <h>250</h>
@@ -123,7 +111,7 @@ Accessors
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1480</x>
+      <x>1310</x>
       <y>990</y>
       <w>490</w>
       <h>250</h>
@@ -150,7 +138,7 @@ Accessors
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1520</x>
+      <x>1350</x>
       <y>900</y>
       <w>90</w>
       <h>110</h>
@@ -162,7 +150,7 @@ m2=1..n</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1940</x>
+      <x>1770</x>
       <y>630</y>
       <w>390</w>
       <h>310</h>
@@ -190,7 +178,7 @@ m2=1..n</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1850</x>
+      <x>1680</x>
       <y>900</y>
       <w>110</w>
       <h>60</h>
@@ -202,7 +190,7 @@ m2=0..n</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1450</x>
+      <x>1280</x>
       <y>330</y>
       <w>850</w>
       <h>280</h>
@@ -230,7 +218,7 @@ Acessors
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1440</x>
+      <x>1270</x>
       <y>600</y>
       <w>310</w>
       <h>80</h>
@@ -241,7 +229,7 @@ Acessors
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>500</x>
+      <x>330</x>
       <y>210</y>
       <w>360</w>
       <h>250</h>
@@ -255,7 +243,7 @@ Acessors
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>850</x>
+      <x>680</x>
       <y>270</y>
       <w>620</w>
       <h>140</h>
@@ -267,7 +255,7 @@ m2=0..n</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>670</x>
+      <x>500</x>
       <y>450</y>
       <w>30</w>
       <h>150</h>
@@ -278,7 +266,7 @@ m2=0..n</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>530</x>
+      <x>360</x>
       <y>580</y>
       <w>310</w>
       <h>250</h>
@@ -289,7 +277,7 @@ m2=0..n</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>890</x>
+      <x>720</x>
       <y>580</y>
       <w>310</w>
       <h>250</h>
@@ -300,7 +288,7 @@ m2=0..n</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>350</x>
+      <x>180</x>
       <y>920</y>
       <w>310</w>
       <h>250</h>
@@ -311,7 +299,7 @@ m2=0..n</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>300</x>
+      <x>130</x>
       <y>450</y>
       <w>400</w>
       <h>150</h>
@@ -322,7 +310,7 @@ m2=0..n</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>670</x>
+      <x>500</x>
       <y>450</y>
       <w>390</w>
       <h>150</h>
@@ -333,7 +321,7 @@ m2=0..n</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>170</x>
+      <x>0</x>
       <y>580</y>
       <w>310</w>
       <h>250</h>
@@ -344,12 +332,132 @@ m2=0..n</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>500</x>
+      <x>330</x>
       <y>450</y>
       <w>200</w>
       <h>490</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
     <additional_attributes>180.0;10.0;180.0;80.0;10.0;80.0;10.0;470.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>860</x>
+      <y>1080</y>
+      <w>50</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m2=1..n</panel_attributes>
+    <additional_attributes>10.0;120.0;10.0;40.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>890</x>
+      <y>1250</y>
+      <w>670</w>
+      <h>300</h>
+    </coordinates>
+    <panel_attributes>BinarySearchTreeNode&lt;Type&gt;
+--
+- nodeData : Type(inherited)
+- rootPointer : BinarySearchTreeNode&lt;Type&gt;*
+- lefChildPointer : BinarySearchTreeNode&lt;Type&gt;*
+- rightChildPointer : BinarySearchTreeNode&lt;Type&gt;*
+--
++ getRootPointer() : BinarySearchTreeNode&lt;Type&gt;*
++ getLeftChildPointer() : BinarySearchTreeNode&lt;Type&gt;*
++ getRightChildPointer() : BinarySearchTreeNode&lt;Type&gt;*
+
++ setRootChildPointer(BinarySearchTreeNode&lt;Type&gt; * root) : void
++ setLeftChildPointer(BinarySearchTreeNode&lt;Type&gt; * left) : void
++ setRightChildPointer(BinarySearchTreeNode&lt;Type&gt; * right) : void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1240</x>
+      <y>900</y>
+      <w>30</w>
+      <h>370</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;350.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1610</x>
+      <y>1300</y>
+      <w>380</w>
+      <h>340</h>
+    </coordinates>
+    <panel_attributes>Model :: Tree&lt;Type&gt;
+--
+- size : int
+- height : int
+- complete : bool
+- balanced : bool
+
+--
+
++ getSize() : int
++ getHeight() : int
++ isComplete() : bool
++ isBalanced() : bool
+
++ setSize(int size) : void
++ setHeight(int height) : void
++ setComplete(bool complete) : void
++ setBalanced(bool balanced) : void
+
++ inOrderTraversal() : void
++ preOrderTraversal() : void
++ postOrderTraversal() : void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>900</x>
+      <y>1640</y>
+      <w>670</w>
+      <h>300</h>
+    </coordinates>
+    <panel_attributes>Model ::BinarySearchTree&lt;Type&gt;
+--
+
+- rootPointer : BinarySearchTreeNode&lt;Type&gt;*
+- size : int (inherited)
+- height : int (inherited)
+- complete : bool (inherited)
+- balanced : bool (inherited)
+--
++ BinarySearchTree() : constructor
++ ~BinarySearchTree() : destructor
+
++ getRootPointer() : BinarySearchTreeNode&lt;Type&gt;*
++ setRootChildPointer(BinarySearchTreeNode&lt;Type&gt; * root) : void
+
++ calculatedSize(BinarySearchTreeNode&lt;Type&gt; *) : int
+
++ inOrderTraversal(BinarySearchTreeNode&lt;Type&gt; *) : void
++ preOrderTraversal(BinarySearchTreeNode&lt;Type&gt; *) : void
++ postOrderTraversal(BinarySearchTreeNode&lt;Type&gt; *) : void </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>890</x>
+      <y>1570</y>
+      <w>740</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>720.0;10.0;330.0;10.0;330.0;70.0;10.0;70.0</additional_attributes>
   </element>
 </diagram>
