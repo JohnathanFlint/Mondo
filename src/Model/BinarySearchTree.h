@@ -92,13 +92,23 @@ int BinarySearchTree<Type> :: calculateSize(BinarySearchTreeNode<Type> * start)
 template <class Type>
 void BinarySearchTree<Type> :: inOrderTraversal(BinarySearchTreeNode<Type> * inStart)
 {
-
+	if(inStart != nullptr)
+	{
+		inOrderTRaversal(inStart->getLeftChild());
+		cout << "Node Contents: " << inStart->getNodeData() << endl;
+		inOrderTraversal(inStart->getRightChild());
+	}
 }
 
 template <class Type>
 void BinarySearchTree<Type> :: preOrderTraversal(BinarySearchTreeNode<Type> * preStart)
 {
-
+	if(preStart != nullptr)
+	{
+		cout << "Node Contents: " << preStart->getNodeData() << endl;
+		preOrderTraversal(PreStart->getLeftChild());
+		preOrderTraversal(preStart->getRightChild());
+	}
 }
 
 template <class Type>
