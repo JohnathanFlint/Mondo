@@ -147,7 +147,7 @@ void BinarySearchTree<Type> :: insert(Type toBeInserted)
 		{
 			previous->setRightChild(insertMe);
 		}
-		insertMe->setRoot(previous);
+		insertMe->setRootPointer(previous);
 	}
 }
 
@@ -179,6 +179,157 @@ bool BinarySearchTree<Type> :: contains(Type toFind)
 			}
 			return false;
 		}
+	}
+}
+
+template <class Type>
+void BinarySearchTree<Type> :: remove(Type dieDieDie)
+{
+	if(root == nullptr)
+	{
+		cout << "Empty tree removal is impossible" << endl;
+	}
+	else
+	{
+		BinarySearchTreeNode<Type> * current = root;
+		BinarySearchTreeNode<Type> * previous = nullptr;
+		bool hasFound = false;
+
+		while(current != nullptr && !hasFound)
+		{
+			if(current->getNodeData() == dieDieDie)
+			{
+				hasFound = true;
+			}
+			else
+			{
+				previous = current;
+				if(dieDieDie < current->getNodeData())
+				{
+					current = current->getLeftChild();
+				}
+				else
+				{
+					current = current->getRightChild();
+				}
+			}
+		}
+
+		if(current == nullptr)
+		{
+			cerr << "Item not found removal unsuccessful" << endl;
+		}
+		else if(hasFound)
+		{
+			if(current == root)
+			{
+				removeNode(root);
+			}
+			else if(dieDieDie < previous->getNodeData())
+			{
+				removeNode(previous->getLeftChild());
+			}
+			else
+			{
+				removeNode(previous->getRightChild());
+			}
+
+		}
+	}
+}
+
+template <class Type>
+void BinarySearchTree<Type> :: removeNode(BinarySearchTreeNode<Type> * & dieDie)
+{
+	BinarySearchTreeNode<Type> * current;
+	BinarySearchTreeNod<Type> * previous;
+	BinarySearchTreeNode<Type> * temp;
+
+	previous = dieDie->getRootPointer();
+
+	//Leaf with no child
+	if(dieDie->getRightChild() == nullptr && dieDie->getLeftChild() == nullptr)
+	{
+		temp = dieDie;
+		dieDie = nullptr;
+
+		if(previous != nullptr && dieDie->getNodeData() < previous->getNodeData())
+		{
+			previous->setLeftChild(dieDie);
+		}
+		else if(previous != nullptr && dieDie->getNodeData() > previous->getNodeData())
+		{
+			previous->setRightChild(dieDie)
+		}
+
+		delete temp;
+	}
+
+	//has only left child
+	else if(dieDie->getRightChild() == nullptr)
+	{
+		temp = dieDie;
+		dieDie = dieDie->getLeftChild();
+
+		if(previous != nullptr && removeMe->getNodeData() < previous->getNodeData())
+		{
+			previous->setLeftChild(dieDie);
+		}
+		else if(previous != nullptr && temp->getNodeData() > previous->getNodeData())
+		{
+			previous->setRightChild(dieDie);
+		}
+
+		dieDie->setRootPointer(previous);
+
+		delete temp;
+	}
+
+	//has only right child
+	else if(dieDie->getLeftChild() == nullptr)
+	{
+		temp = dieDie;
+		dieDie = dieDie->getRightChild();
+
+		if(previous != nullptr && dieDie->getNodeData() < previous->getNodeData())
+		{
+			previous->setLeftChild(dieDie);
+		}
+		else if(previous != nullptr && dieDie->getNodeData() > previous->getNodeData())
+		{
+			previous->setRightChild(dieDie);
+		}
+
+		dieDie->setRootPointer(previous);
+		delete temp;
+	}
+
+	//has both children
+	else
+	{
+		current = dieDie->getLeftChild();
+		previous = nullptr;
+
+		while(current->getRightChild() != nullptr)
+		{
+			previous = current;
+			current = current->getRightChild();
+		}
+
+		dieDie->setNodeData(current->getNodeData());
+
+		if(previous == nullptr)
+		{
+			dieDie->setLeftChild(current->getLeftChild());
+			current->getLeftChild()->setRoot(dieDie);
+		}
+		else
+		{
+			previous->setRightChild(current->getLeftChild());
+			current->getLeftChild()->detRootPointer(previous);
+		}
+
+		delete current;
 	}
 }
 
