@@ -151,4 +151,35 @@ void BinarySearchTree<Type> :: insert(Type toBeInserted)
 	}
 }
 
+template <class Type>
+bool BinarySearchTree<Type> :: contains(Type toFind)
+{
+	BinarySearchTreeNode<Type> * current = root;
+
+	if(current == nullptr)
+	{
+		return false;
+	}
+	else
+	{
+		while(current != nullptr)
+		{
+			if(toFind == current->getNodeData())
+			{
+				return true;
+			}
+			else if(toFind < current->getNodeData())
+			{
+				current = current->getLeftChild();
+			}
+			else
+
+			{
+				current = current->getRightChild();
+			}
+			return false;
+		}
+	}
+}
+
 #endif /* MODEL_BINARYSEARCHTREE_H_ */
