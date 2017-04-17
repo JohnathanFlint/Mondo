@@ -8,7 +8,6 @@
 #include "StructureController.h"
 #include <iostream>
 
-
 using namespace std;
 
 StructureController::StructureController()

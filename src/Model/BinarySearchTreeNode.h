@@ -21,6 +21,7 @@ private:
 public:
 	BinarySearchTreeNode();
 	BinarySearchTreeNode(Type data);
+	~BinarySearchTreeNode();
 
 	BinarySearchTreeNode<Type> * getRootPointer();
 	BinarySearchTreeNode<Type> * getLeftChild();
@@ -31,6 +32,13 @@ public:
 	void setRootPointer(BinarySearchTreeNode<Type> * right);
 
 };
+
+template <class Type>
+BinarySearchTreeNode<Type> :: ~BinarySearchTreeNode()
+{
+	delete leftChild;
+	delete rightChild;
+}
 
 template <class Type>
 BinarySearchTreeNode<Type> :: BinarySearchTreeNode()
