@@ -397,26 +397,19 @@ m2=1..n</panel_attributes>
     </coordinates>
     <panel_attributes>Model :: Tree&lt;Type&gt;
 --
-- size : int
-- height : int
-- complete : bool
-- balanced : bool
-
---
-
+*Information Methods*
 + getSize() : int
 + getHeight() : int
 + isComplete() : bool
 + isBalanced() : bool
-
-+ setSize(int size) : void
-+ setHeight(int height) : void
-+ setComplete(bool complete) : void
-+ setBalanced(bool balanced) : void
-
+*Traversals*
 + inOrderTraversal() : void
 + preOrderTraversal() : void
-+ postOrderTraversal() : void</panel_attributes>
++ postOrderTraversal() : void
+*Data Operations*
++ insert(Type) : void
++ contains(Type) : bool
++ remove(Type) : void</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
