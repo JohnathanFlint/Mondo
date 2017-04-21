@@ -19,6 +19,9 @@ public:
 	StructureTester();
 	virtual ~StructureTester();
 	void testBinarySearchTreeOperations();
+	void testBinarySearchData();
+	void testAVLTreeOperations();
+	void testAVLData();
 };
 
 }

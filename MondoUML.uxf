@@ -409,7 +409,7 @@ m2=1..n</panel_attributes>
 *Data Operations*
 + insert(Type) : void
 + contains(Type) : bool
-+ remove(Type) : void</panel_attributes>
++ rem</panel_attributes>
     <additional_attributes/>
   </element>
   <element>

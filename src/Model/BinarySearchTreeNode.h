@@ -11,7 +11,7 @@
 #include "Node.hpp"
 
 template <class Type>
-class BinarySearchTreeNode
+class BinarySearchTreeNode : public Node<Type>
 {
 private:
 	BinarySearchTreeNode<Type> * root;
@@ -28,8 +28,8 @@ public:
 	BinarySearchTreeNode<Type> * getRightChild();
 
 	void setRootPointer(BinarySearchTreeNode<Type> * root);
-	void setRootPointer(BinarySearchTreeNode<Type> * left);
-	void setRootPointer(BinarySearchTreeNode<Type> * right);
+	void setLeftPointer(BinarySearchTreeNode<Type> * left);
+	void setRightPointer(BinarySearchTreeNode<Type> * right);
 
 };
 
@@ -81,15 +81,15 @@ void BinarySearchTreeNode<Type> :: setRootPointer(BinarySearchTreeNode<Type> * r
 }
 
 template <class Type>
-void BinarySearchTreeNode<Type> :: setRootPointer(BinarySearchTreeNode<Type> * leftChild)
+void BinarySearchTreeNode<Type> :: setLeftPointer(BinarySearchTreeNode<Type> * leftChild)
 {
 	this->leftChild = leftChild;
 }
 
 template <class Type>
-void BinarySearchTreeNode<Type> :: setRootPointer(BinarySearchTreeNode<Type> * rightChild)
+void BinarySearchTreeNode<Type> :: setRightPointer(BinarySearchTreeNode<Type> * rightChild)
 {
-	this->root = rightChild;
+	this->rightChild = rightChild;
 }
 
 #endif /* MODEL_BINARYSEARCHTREENODE_H_ */
