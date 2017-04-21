@@ -25,7 +25,7 @@ private:
 	BinarySearchTreeNode<Type> * insertedNode(BinarySearchTreeNode<Type> * parent, Type value);
 	BinarySearchTreeNode<Type> * removenode(BinarySearchTreeNode<Type> * parent, Type value);
 
-	int heightDifference(BinarySearchTreeNode<Type> * parent)
+	int heightDifference(BinarySearchTreeNode<Type> * parent);
 
 public:
 	AVLTree();
@@ -33,7 +33,6 @@ public:
 
 	void insert(Type toInsert);
 	void remove(Type value);
-
 
 };
 
@@ -129,13 +128,48 @@ BinarySearchTreeNode<Type> * AVLTree<Type> :: balanceSubTree(BinarySearchTreeNod
 template <class Type>
 AVLTree<Type> :: AVLTree() : BinarySearchTree<Type>()
 {
-
+	this->root = nullptr;
 }
 
 template <class Type>
 AVLTree<Type> :: ~AVLTree() : BinarySearchTree<Type>()
 {
+	delete this->getRoot();
+}
 
+template <class Type>
+BinarySearchTreeNode<Type> * AVLTree<Type> :: removeNode(BinarySearchTreeNode<Type> * parent, Type inserted)
+{
+
+}
+
+template <class Type>
+BinarySearchTreeNode<Type> * AVLTree<Type> :: insertNode(BinarySearchTreeNode<Type> * parent, Type inserted)
+{
+	if(parent == nullptr)
+	{
+		parent = new BnarySearchTreeNode<Type>(inserted);
+		return parent;
+	}
+	else if(inserted < parent->getNodeData())
+	{
+		parent->setLeftChild(insertedNode(parent->getLeftChild(), inserted));
+		parent = balanceSubtree(parent);
+	}
+	else if(inserted > parent->getNodeData())
+	{
+		parent->setRightChild(insertedNode(parent->getRightChild(), inserted));
+		parent = balanceSubTree(parent);
+	}
+
+	return parent;
+
+}
+
+template <class Type>
+void AVLTree<Type> :: insert(Type item)
+{
+	insertNode(this->getRoot(), item);
 }
 
 #endif /* MODEL_AVLTREE_H_ */
