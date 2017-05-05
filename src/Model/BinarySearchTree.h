@@ -50,7 +50,7 @@ public:
 
 	int getSize();
 	int getHeight();
-	bool isComplete();
+	bool BinarySearchTree<Type> :: isComplete(BinarySeaarchTreeNode<Type> * start, int index, int size)
 	bool isBalanced();
 
 	bool contains(Type value);
