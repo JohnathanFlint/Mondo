@@ -189,6 +189,56 @@ void StructureController :: testNumberStack()
 
 }
 
+void StructureController :: testGraph()
+{
+		Graph<string> connectedWords;
+
+		connectedWords.addVertex("Stonewards"); //0
+		connectedWords.addVertex("Bondsmiths"); //1
+		connectedWords.addVertex("Windrunners"); //2
+		connectedWords.addVertex("Skybreakers"); //3
+		connectedWords.addVertex("Dustbringers"); //4
+		connectedWords.addVertex("Edgedancers"); //5
+		connectedWords.addVertex("Truthwatchers"); //6
+		connectedWords.addVertex("Lightweaver"); //7
+		connectedWords.addVertex("Elsecaller"); //8
+		connectedWords.addVertex("Willshaper"); //9
+		connectedWords.addVertex("Cohesion"); //10
+		connectedWords.addVertex("Tension"); //11
+		connectedWords.addVertex("Adhesion"); //12
+		connectedWords.addVertex("Gravitation"); //13
+		connectedWords.addVertex("Division"); //14
+		connectedWords.addVertex("Abrasion"); //15
+		connectedWords.addVertex("Progression"); //16
+		connectedWords.addVertex("Illumination"); //17
+		connectedWords.addVertex("Transformation"); //18
+		connectedWords.addVertex("Transportation"); //19
+
+		connectedWords.addEdge(0,10);
+		connectedWords.addEdge(0,11);
+		connectedWords.addEdge(1,11);
+		connectedWords.addEdge(1,12);
+		connectedWords.addEdge(2,12);
+		connectedWords.addEdge(2,13);
+		connectedWords.addEdge(3,13);
+		connectedWords.addEdge(3,14);
+		connectedWords.addEdge(4,14);
+		connectedWords.addEdge(4,15);
+		connectedWords.addEdge(5,15);
+		connectedWords.addEdge(5,16);
+		connectedWords.addEdge(6,16);
+		connectedWords.addEdge(6,17);
+		connectedWords.addEdge(7,17);
+		connectedWords.addEdge(7,18);
+		connectedWords.addEdge(8,18);
+		connectedWords.addEdge(8,19);
+		connectedWords.addEdge(9,19);
+		connectedWords.addEdge(9,10);
+
+		connectedWords.depthFirstTraversal(connectedWords, 0)
+
+}
+
 void StructureController :: start()
 {
 	//cout << "Going to test the IntNodeArray" << endl;
@@ -199,7 +249,8 @@ void StructureController :: start()
 	//testAdvancedFeatures();
 	//testMemeQueue();
 	//testList();
-	testNumberStack();
+	//testNumberStack();
+	testGraph();
 }
 
 

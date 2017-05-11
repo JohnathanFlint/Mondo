@@ -6,11 +6,11 @@
  */
 
 #ifndef MODEL_ARRAY_H_
-#define MODEL_ARRAY_H_\
+#define MODEL_ARRAY_H_
 
 #include <assert.h>
 #include "Node.hpp"
-# include <iostream>
+#include <iostream>
 
 namespace std {
 

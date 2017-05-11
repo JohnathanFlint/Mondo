@@ -17,6 +17,7 @@
 #include "../Model/Stack.hpp"
 #include "../Model/Queue.hpp"
 #include "../Model/Meme.hpp"
+#include "../Model/Graph.hpp"
 #include <string>
 
 
@@ -37,6 +38,7 @@ private:
 	void testListTiming();
 	void testMemeQueue();
 	void testNumberStack();
+	void testGraph();
 
 public:
 	StructureController();

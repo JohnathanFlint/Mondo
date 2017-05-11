@@ -8,7 +8,7 @@
 #ifndef MODEL_GRAPH_HPP_
 #define MODEL_GRAPH_HPP_
 
-#include <set>;
+#include <set>
 #include <queue>
 #include <assert.h>
 
@@ -22,7 +22,8 @@ private:
 	bool adjacentMatrix [MAXIMUM][MAXIMUM];
 	Type graphData[MAXIMUM];
 	int vertexCount;
-	void depthFirstTraversal(Graph<Type> currentGraph, int vertex, bool visitedVertices[]);
+	void depthFirstTraversal(Graph<Type> current, int vertex, bool visitedVertices[]);
+
 
 public:
 	Graph();
@@ -37,6 +38,7 @@ public:
 	bool areConnected(int source, int target) const;
 	std::set<int> neighbors(int vertex) const;
 	void depthFirstTraversal(Graph<Type> graph, int vertex);
+	void breadthFirstTraversal(Graph<Type> graph, int vertex);
 };
 
 template <class Type>
@@ -145,7 +147,7 @@ void Graph<Type> :: depthFirstTraversal(Graph<Type> currentGraph, int vertex)
 }
 
 template<class Type>
-void Graph<Type> :: depthFirstTraversal(Graph<Type> currentGraph, int vertex, bool visitedVertices)
+void Graph<Type> :: depthFirstTraversal(Graph<Type> currentGraph, int vertex, bool visitedVertices[])
 {
 	std::set<int> connections = currentGraph.neighbors(vertex);
 	std::set<int>::iterator setIterator;
