@@ -203,7 +203,7 @@ namespace std
 		Type information;
 
 		Node<Type> * current = front;
-		for(int position = 0; position < index; position)
+		for(int position = 0; position < index; position++)
 		{
 			current = current->getNodePointer();
 		}

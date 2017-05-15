@@ -53,8 +53,7 @@ Graph<Type> :: Graph()
 template <class Type>
 Graph<Type> :: ~Graph()
 {
-	delete [] this->adjacentMatrix;
-	delete [] this->graphData;
+
 }
 
 template <class Type>
@@ -82,7 +81,7 @@ void Graph<Type> :: addVertex(const Type& value)
 template<class Type>
 bool Graph<Type> :: areConnected(int source, int target) const
 {
-	assert(source < size() && target < size);
+	assert(source < size() && target < size());
 
 	bool isEdge = false;
 	isEdge = adjacentMatrix[source][target];

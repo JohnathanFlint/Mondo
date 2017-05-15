@@ -448,7 +448,7 @@ void BinarySearchTree<Type> :: removeNode(BinarySearchTreeNode<Type> * dieDie)
 		else
 		{
 			previous->setRightChild(current->getLeftChild());
-			current->getLeftChild()->detRootPointer(previous);
+			current->getLeftChild()->detRootPointer(previous); 
 		}
 
 		delete current;

@@ -235,7 +235,7 @@ void StructureController :: testGraph()
 		connectedWords.addEdge(9,19);
 		connectedWords.addEdge(9,10);
 
-		connectedWords.depthFirstTraversal(connectedWords, 0)
+		connectedWords.depthFirstTraversal(connectedWords, 0);
 
 }
 
