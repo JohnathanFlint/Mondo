@@ -18,6 +18,10 @@
 #include "../Model/Queue.hpp"
 #include "../Model/Meme.hpp"
 #include "../Model/Graph.hpp"
+#include "../Model/Tree.h"
+#include "../Model/AVLTree.h"
+#include "../Model/BinarySearchTree.h"
+#include "../Model/BinarySearchTreeNode.h"
 #include <string>
 
 
@@ -42,6 +46,10 @@ private:
 
 public:
 	StructureController();
+	void testBinarySearchTreeOperations();
+	void testBinarySearchData();
+	void testAVLTreeOperations();
+	void testAVLData();
 	void start();
 };
 

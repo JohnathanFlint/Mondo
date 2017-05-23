@@ -52,6 +52,7 @@ public:
 	int getHeight();
 	bool BinarySearchTree<Type> :: isComplete(BinarySeaarchTreeNode<Type> * start, int index, int size)
 	bool isBalanced();
+	bool isComplete();
 
 	bool contains(Type value);
 	void insert(Type toBeInserted);
@@ -470,6 +471,12 @@ template<class Type>
 int BinarySearchTree<Type> :: getHeight()
 {
 	return calculateHeight(root);
+}
+
+template<class Type>
+bool BinarySearchTree<Type> :: isComplete()
+{
+	return isComplete(root);
 }
 
 template<class Type>

@@ -91,6 +91,8 @@ public:
     bool operator < (const CrimeData & other);
     bool operator > (const CrimeData & other);
     bool operator == (const CrimeData & other);
+
+
 };
 
 #endif /* CrimeData_hpp */
