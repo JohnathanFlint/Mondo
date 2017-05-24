@@ -309,7 +309,7 @@ void StructureController :: testBinarySearchData()
 
     cout << "The time to read in the tree was: " << endl;
 
-    treeTimer.displayTimerInformation();
+    treeTimer.displayTimerInfo();
 
 
 
@@ -385,7 +385,7 @@ void StructureController :: testAVLData()
 
     cout << "The time to read in the tree was: " << endl;
 
-    treeTimer.displayTimerInformation();
+    treeTimer.displayTimerInfo();
 
 }
 

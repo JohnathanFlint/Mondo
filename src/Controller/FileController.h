@@ -26,6 +26,8 @@ public:
 private:
 	DoubleList<Meme> readMemeDataFromFileAsList(string filename);
 	void writeMemeDataStats(DoubleList<Meme> source, string filename);
+	BinarySearchTree<CrimeData> readCrimeDataToBinarySearchTree(string name);
+	AVLTree<CrimeData> readCrimeDataToAVLTree(string name);
 
 };
 
